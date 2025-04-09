@@ -29,7 +29,7 @@ public class PracticeProblem {
         int right = searchMazeMovesHelper(arr, row, col + 1, moves + 1);
         int up = searchMazeMovesHelper(arr, row - 1, col, moves + 1);
 
-        // Return the minimum of the valid paths (non -1)
+        // Return the minimum of the valid paths (non -1) (Also back tracks when we return -1)
         if (right == -1) {
             return up; // Only up is valid
         } else if (up == -1) {
